@@ -1,0 +1,14 @@
+    <h3>
+		MEMORY  [ TotalPhysicalMemory: <%= total_mem %> MB ]   
+    </h3>
+    <%= area_chart Uzebba::Terminal.group_by_minute(:created_at).maximum(:memory_usage), min: @terminal.memory_usage.to_d - 200, xtitle: "Time", ytitle: "in Megabytes" %> 
+    <br>
+        <h3>
+            <small style="color: blue;">
+                Available: <%= available_mem %> MB
+            </small> | 
+            <small style="color: red;">
+                Used: <strong><u><%= @terminal.memory_usage %></u> MB</strong>
+            </small>
+         
+        </h3> 

@@ -1,0 +1,42 @@
+/*
+ * UZEBBA MONITORING TOOL CSS
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+#tableau {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tableau td, #tableau th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tableau tr:nth-child(even){background-color: #f2f2f2;}
+
+#tableau tr:hover {background-color: #ddd;}
+
+#tableau th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #4CAF50;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+       

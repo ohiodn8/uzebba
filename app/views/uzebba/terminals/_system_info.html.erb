@@ -1,0 +1,64 @@
+<div class="grid-container">
+    <div class="grid-item">
+<table id="tableau">
+    <tbody>
+      <tr>
+        <th>Tool Name</th>
+        <td><strong>Uzebba Monitoring Tool</strong> </td>
+      </tr>  
+      <tr>
+        <th>Computer Name</th>
+        <td><%= Socket.gethostname %></td>
+      </tr>          
+      <tr>
+        <th>OS</th>
+        <td>
+          <% if OS.windows? == true %>
+            Windows OS
+          <% elsif OS.mac? == true %>
+            Mac OS 
+          <% elsif OS.posix? == true %>  
+            Linux
+          <% elsif OS.java? == true %> 
+            (jruby)
+          <% else %>
+            Hmmm...
+          <% end %>    
+        </td>
+      </tr>
+      <tr>
+        <th>Home Path</th>
+        <td>
+            <% if OS.windows? == true %>
+                <%= `echo %HomePath%` %> 
+            <% else %>
+                <%= `echo $HOME` %>
+            <% end %>
+        </td>
+      </tr>        
+    </tbody>
+  </table>
+    </div>  
+    <div class="grid-item">
+<table id="tableau">
+    <tbody>
+      <tr>
+        <th>Ruby Version</th>
+        <td><%= `ruby --version` %></td>
+      </tr>
+      <tr>
+        <th>Rails Version</th>
+        <td><%= `rails -v` %></td>
+      </tr>
+      <tr>
+        <th>Browser Version</th>
+        <td><%= browser.name %> <%= browser.full_version %></td>
+      </tr> 
+      <tr>
+        <th>App Path</th>
+        <td><%= `pwd` %></td>
+      </tr>        
+    </tbody>
+  </table> 
+    </div>  
+</div> 
