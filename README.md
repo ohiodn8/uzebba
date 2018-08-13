@@ -20,9 +20,7 @@ $ gem install uzebba
 ```
 <hr>
 <strong>2. Run Generator:</strong>
-```bash
-$ rails generate uzebba:install 
-```
+<pre><code>$ rails generate uzebba:install </code></pre>
  
 <strong>Run Migration:</strong>
 ```bash
