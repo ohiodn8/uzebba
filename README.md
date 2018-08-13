@@ -19,12 +19,12 @@ Or install it yourself as:
 $ gem install uzebba
 ```
 <hr>
-<strong>2. Run Generator</strong>
+<strong>2. Run Generator:</strong>
 ```bash
-$ rails generate uzebba:install
+$ rails generate uzebba:install 
 ```
-
-<strong>Run Migration</strong>
+ 
+<strong>Run Migration:</strong>
 ```bash
 $ rails db:migrate
 ```
