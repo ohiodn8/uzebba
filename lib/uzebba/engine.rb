@@ -17,8 +17,9 @@ module Uzebba
       )
      end
       
-    # CRONO Start Up
+    
     if defined?(Rails::Server)
+      ## CRONO Start Up    
       config.after_initialize do
         if OS.windows?
           system "echo *** CRONO STARTING IN NEW CMD. . . ***"    
@@ -26,17 +27,17 @@ module Uzebba
         else    
           system "bundle exec crono start RAILS_ENV=development"
         end    
-      end
+      end 
+      ## CRONO Terminate 
+      if OS.windows?  
+          def do_at_exit(str1)    
+            at_exit { print str1 }
+          end
+          at_exit { system 'taskkill /FI "WindowTitle eq uzebba19crono*" /T /F' }
+          do_at_exit("***CRONO TERMINATED: ") 
+      end 
+        
     end      
-    
-    # Crono Terminate 
-    if OS.windows?  
-        def do_at_exit(str1)    
-          at_exit { print str1 }
-        end
-        at_exit { system 'taskkill /FI "WindowTitle eq uzebba19crono*" /T /F' }
-        do_at_exit("***CRONO TERMINATED: ") 
-    end    
-      
+       
   end
 end
