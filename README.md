@@ -14,10 +14,10 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install uzebba
-```
+Or install it yourself as: 
+<pre><code><strike>$ gem install uzebba </strike></code></pre>
+ 
+ 
 <hr>
 <strong>2. Run Generator:</strong>
 <pre><code>$ rails generate uzebba:install </code></pre>
