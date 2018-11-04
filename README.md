@@ -6,7 +6,7 @@
 <strong>1. Add this line to your application's Gemfile:</strong>
 
 ```ruby
-gem 'uzebba', :git => 'git://github.com/ohiodn8/uzebba.git'
+gem 'uzebba', git: 'git://github.com/ohiodn8/uzebba.git'
 ```
 
 And then execute:
