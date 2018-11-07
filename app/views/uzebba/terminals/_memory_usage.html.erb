@@ -1,5 +1,5 @@
     <h3>
-		MEMORY  [ TotalPhysicalMemory: <%= total_mem %> MB ]   
+		MEMORY  [ TotalMemory: <%= total_mem %> MB ]   
     </h3>
     <%= area_chart Uzebba::Terminal.group_by_minute(:created_at).maximum(:memory_usage), min: @terminal.memory_usage.to_d - 200, xtitle: "Time", ytitle: "in Megabytes" %> 
     <br>
