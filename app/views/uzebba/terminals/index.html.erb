@@ -1,3 +1,11 @@
+<div id="head">
+  <title>Uzebba</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    "uzebba/uzebba", media: "all" %>
+  <%= javascript_include_tag "uzebba/uzebba" %>  
+</div>
+
 <%= render "uzebba/terminals/system_info" %>
 <div id="all_terminals">    
     <%= render "uzebba/terminals/terminals" %>
