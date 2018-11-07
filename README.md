@@ -4,6 +4,12 @@
 
 ## Installation
 <strong>1. Add this line to your application's Gemfile:</strong>
+```ruby
+gem 'uzebba'
+```
+
+OR get it from git:
+
 
 ```ruby
 gem 'uzebba', git: 'git://github.com/ohiodn8/uzebba.git'
@@ -15,7 +21,7 @@ $ bundle
 ```
 
 Or install it yourself as: 
-<pre><code><strike>$ gem install uzebba </strike></code></pre>
+<pre><code>$ gem install uzebba </code></pre>
  
  
 <hr>
