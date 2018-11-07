@@ -6,12 +6,13 @@
 //= require chartkick
 
 // Ajax Controller for all terminal ID
-$(function() {
+$(function timeout() {
   if ($('#all_terminals').length) {
-    setInterval(function(){
+    setTimeout(function(){
       $.getScript(window.location.pathname, function(data, textStatus, jqxhr) {
         console.log('Load was performed.');
       });
+	  timeout();
     },3000);
   }
 });
