@@ -1,7 +1,7 @@
 // UZEBBA MONITORING TOOL JS
 //
 // require rails-ujs
-//= require jquery3.min
+//= require jquery3
 //= require Chart.bundle
 //= require chartkick
 
