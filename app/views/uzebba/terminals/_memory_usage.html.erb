@@ -1,7 +1,8 @@
     <h3>
-		MEMORY  [ TotalMemory: <%= total_mem %> MB ]   
+		MEMORY  [Total: <%= number_with_delimiter(total_mem.ceil, :delimiter => ',') %> MB]  
+		[<%= (total_mem/1000).to_s[0,4] %> GB] 
     </h3>
-    <%= area_chart Uzebba::Terminal.group_by_minute(:created_at).maximum(:memory_usage), min: @terminal.memory_usage.to_d - 1000, xtitle: "Time", ytitle: "in Megabytes" %> 
+    <%= area_chart Uzebba::Terminal.group_by_minute(:created_at, last: 40).maximum(:memory_usage), min: @terminal.memory_usage.to_d - 1000, xtitle: "Time", ytitle: "in Megabytes" %> 
     <br>
         <h3>
             <small style="color: blue;">

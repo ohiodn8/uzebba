@@ -1,11 +1,11 @@
 <h3>CPU USAGE</h3>
-<%= line_chart Uzebba::Terminal.group_by_minute(:created_at).maximum(:cpu_usage) %>
+<%= line_chart Uzebba::Terminal.group_by_minute(:created_at, last: 45).maximum(:cpu_usage) %>
 <h3>
     <% if Gem.win_platform? %>
     <small style="color: green;">
         CPU USAGE(win) => <%= `wmic cpu get loadpercentage`.scan(/\d/).join('').to_i %> %
     </small> 
     <% else %>
-        <%= `(grep 'cpu ' /proc/stat;sleep 0.1;grep 'cpu ' /proc/stat)|awk -v RS="" '{print "CPU "($13-$2+$15-$4)*100/($13-$2+$15-$4+$16-$5)"%"}'`.scan(/\d/).join('').to_d %>
+        <%= `(grep 'cpu ' /proc/stat;sleep 0.1;grep 'cpu ' /proc/stat)|awk -v RS="" '{print "CPU "($13-$2+$15-$4)*100/($13-$2+$15-$4+$16-$5)"%"}'`.scan(/\d/).join('').to_s.first(2).to_i %>
     <% end %>
 </h3>
