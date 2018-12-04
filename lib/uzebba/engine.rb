@@ -35,6 +35,9 @@ module Uzebba
           end
           at_exit { system 'taskkill /FI "WindowTitle eq uzebba19crono*" /T /F' }
           do_at_exit("***CRONO TERMINATED: ") 
+	  else	  
+          at_exit { Dir.chdir Rails.root 
+		  system 'rm tmp/pids/crono.pid' }		  
       end 
         
     end      

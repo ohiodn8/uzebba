@@ -49,7 +49,7 @@ mount Uzebba::Engine => "/uzebba"
 
 <p><strong><u>For Windows</u>: </strong> when you start the rails server, the gem will open a new cmd minimized on the taskbar. When you stop the rails server the application will also close the minimized cmd. This is the gem's way of imitating a Linux background process to handle the crono process.</p>
 
-<p><strong><u>For Linux</u>: </strong> when you start the rails server, the crono process will run in background. To stop the process via the terminal, you have to do <code>ps aux | grep crono</code> to view the crono pid, and <code>kill -s sigterm [pid]</code> to terminate the process.</p>
+<p><strong><u>For Linux</u>: </strong> when you start the rails server, the crono process will run in background; and when you stop the rails server, the crono process should stop. [<strike>To stop the process via the terminal, you have to do <code>ps aux | grep crono</code> to view the crono pid, and <code>kill -s sigterm [pid]</code> to terminate the process.</strike>]</p>
 
 <p><strong>Do not use in production.</strong></p>
 
