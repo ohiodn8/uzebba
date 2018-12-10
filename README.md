@@ -1,6 +1,7 @@
 # Uzebba
 <strong>Ruby on Rails monitoring tool for monitoring system performance (cpu & memory usage)</strong>
 <p><small>Not yet complete. . .</small></p>
+<img src="https://github.com/ohiodn8/image-repo/blob/master/uzebba_monitoring2.PNG" alt="docimer-screenshot"> 
 
 ## Installation
 <strong>1. Add this line to your application's Gemfile:</strong>
@@ -53,8 +54,6 @@ mount Uzebba::Engine => "/uzebba"
 
 <p><strong>Do not use in production.</strong></p>
 
-
-<img src="https://github.com/ohiodn8/image-repo/blob/master/uzebba_monitoring2.PNG" alt="docimer-screenshot"> 
 
 
 ## Contributing
