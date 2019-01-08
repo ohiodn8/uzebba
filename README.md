@@ -1,6 +1,5 @@
 # Uzebba
 <strong>Ruby on Rails monitoring tool for monitoring system performance (cpu & memory usage)</strong>
-<p><small>Not yet complete. . .</small></p>
 <img src="https://github.com/ohiodn8/image-repo/blob/master/uzebba_monitoring2.PNG" alt="docimer-screenshot"> 
 
 ## Installation
@@ -20,9 +19,6 @@ And then execute:
 ```bash
 $ bundle
 ```
-
-Or install it yourself as: 
-<pre><code>$ gem install uzebba </code></pre>
  
  
 <hr>
