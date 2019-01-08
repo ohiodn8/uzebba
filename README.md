@@ -17,7 +17,7 @@ gem 'uzebba', git: 'git://github.com/ohiodn8/uzebba.git'
 
 And then execute:
 ```bash
-$ bundle
+$ bundle install
 ```
  
  
