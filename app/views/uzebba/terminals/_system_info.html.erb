@@ -56,7 +56,11 @@
       </tr> 
       <tr>
         <th>App Path</th>
-        <td><%= `pwd` %></td>
+            <% if OS.windows? == true %>
+               </td><%= `echo %cd%` %></td> 
+            <% else %>
+               </td><%= `pwd` %></td>
+            <% end %>          
       </tr>        
     </tbody>
   </table> 
