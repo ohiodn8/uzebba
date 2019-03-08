@@ -4,7 +4,7 @@
     <tbody>
       <tr>
         <th>Tool Name</th>
-        <td><strong><a href="https://github.com/ohiodn8/uzebba" target="_blank">Uzebba Monitoring Tool</a></strong> </td>
+        <td><b><a href="https://github.com/ohiodn8/uzebba" target="_blank">Uzebba Monitoring Tool</a></b> || <b>[ <%= link_to "Main App", main_app.root_path %> ]</b></td>
       </tr>  
       <tr>
         <th>Computer Name</th>
@@ -27,12 +27,12 @@
         </td>
       </tr>
       <tr>
-        <th>Home Path</th>
+        <th>User</th>
         <td>
             <% if OS.windows? == true %>
-                <%= `echo %HomePath%` %> 
+                <p><%= ENV['USERDOMAIN'] %>\<%= ENV['USERNAME'] %></p> 
             <% else %>
-                <%= `echo $HOME` %>
+                <%= `echo "$USER"` %>
             <% end %>
         </td>
       </tr>        
@@ -57,9 +57,9 @@
       <tr>
         <th>App Path</th>
             <% if OS.windows? == true %>
-               </td><%= `echo %cd%` %></td> 
+               <td><%= `echo %cd%` %></td> 
             <% else %>
-               </td><%= `pwd` %></td>
+               <td><%= `pwd` %></td>
             <% end %>          
       </tr>        
     </tbody>

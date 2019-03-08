@@ -21,8 +21,8 @@
 
  class TerminalsDeleteJob
    def perform
-      @terminal = Uzebba::Terminal.order('created_at ASC').limit(500).destroy_all 
+      @terminal = Uzebba::Terminal.order('created_at ASC').limit(600).destroy_all 
    end
  end
 Crono.perform(TerminalsJob).every 1.minute
-Crono.perform(TerminalsDeleteJob).every 1.hours
+Crono.perform(TerminalsDeleteJob).every 2.hours
