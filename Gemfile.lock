@@ -40,7 +40,7 @@ GEM
     arel (9.0.0)
     browser (2.5.3)
     builder (3.2.3)
-    chartkick (3.0.2)
+    chartkick (3.2.1)
     concurrent-ruby (1.1.4)
     crass (1.0.4)
     crono (1.1.2)
