@@ -1,15 +1,16 @@
-    <h3>
-		MEMORY  [Total: <%= number_with_delimiter(total_mem.ceil, :delimiter => ',') %> MB]  
-		[<%= (total_mem/1000).to_s[0,4] %> GB] 
+    <h3 class="inset">
+		MEMORY USAGE  <small>[Total: <%= number_with_delimiter(total_mem.ceil, :delimiter => ',') %> MB]  
+		[<%= (total_mem/1000).to_s[0,4] %> GB]</small> 
     </h3>
-    <%= area_chart Uzebba::Terminal.group_by_minute(:created_at, last: 40).maximum(:memory_usage), min: @terminal.memory_usage.to_d - 1000, xtitle: "Time", ytitle: "in Megabytes" %> 
+    <%= area_chart Uzebba::Terminal.group_by_minute(:created_at, last: 40).maximum(:memory_usage), min: @terminal.memory_usage.to_d - 1000, max: total_mem, xtitle: "Time", ytitle: "in Megabytes" %> 
     <br>
-        <h3>
+        <h4>
             <small style="color: blue;">
-                Available: <%= available_mem %> MB
+                Avail: <%= available_mem %> MB
             </small> | 
             <small style="color: red;">
                 Used: <strong><u><%= @terminal.memory_usage %></u> MB</strong>
             </small>
+			&nbsp;<em>Percent: <%= ((@terminal.memory_usage/total_mem) * 100).round(2) %> %</em>
          
-        </h3> 
+        </h4> 

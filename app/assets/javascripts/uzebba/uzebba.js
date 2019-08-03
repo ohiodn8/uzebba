@@ -13,6 +13,6 @@ $(function timeout() {
         console.log('Load was performed.');
       });
 	  timeout();
-    },3000);
+    },30000);
   }
 });
