@@ -15,9 +15,6 @@ OR get it from git:
 gem 'uzebba', git: 'git://github.com/ohiodn8/uzebba.git'
 ``` 
 
-```ruby
-gem 'uzebba', path: "gems/uzebba-latest"
-``` 
 
 <b>And then</b> execute:
 ```bash
