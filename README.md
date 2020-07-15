@@ -13,9 +13,13 @@ OR get it from git:
 
 ```ruby
 gem 'uzebba', git: 'git://github.com/ohiodn8/uzebba.git'
-```
+``` 
 
-And then execute:
+```ruby
+gem 'uzebba', path: "gems/uzebba-latest"
+``` 
+
+<b>And then</b> execute:
 ```bash
 $ bundle install
 ```
